@@ -4,17 +4,14 @@ Installs and configures a gateway Linux machine
 This project bootstraps my home server network by managing serveral factors
 
 1. automated install CentOS 7 Onto a Intel based server
-2. Use kickstart
+2. Use kickstarter
 3. Establishes two networks -- Internet and Internal
 4. Installs a SSH server
-5. Uses CentOS Virtual Machine install option
-6. Documents the process
+5. Documents the process
 
 
 Here is the idea
 
-I need to bootstrap a (home) data center. I will use this device as a gateway to an operations network. This device will have a KVM VM on it that implements the Cobbler deployment system.
-
-The Cobbler VM will be a separate project, but this project will set up the base system with the ability to automatically create a working VM using KVM.  
+I need to bootstrap a (home) data center. I will use this device as a gateway to an operations network.
 
 See FILES to get started
