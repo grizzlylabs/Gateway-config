@@ -13,6 +13,8 @@ This project bootstraps my home server network by managing serveral factors
 
 Here is the idea
 
-I need to bootstrap a (home) data center. I will use this device as a gateway to an operations network. This device will have a KVM VM on it that implements the Fuel deployment system.
+I need to bootstrap a (home) data center. I will use this device as a gateway to an operations network. This device will have a KVM VM on it that implements the Cobbler deployment system.
 
-The Fuel VM will be a separate project, but this project will set up the base system with the ability to automatically create a working VM using KVM.  
+The Cobbler VM will be a separate project, but this project will set up the base system with the ability to automatically create a working VM using KVM.  
+
+See FILES to get started
