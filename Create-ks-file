@@ -1,0 +1,57 @@
+Making the Installation Media
+
+Tools
+Linux Workstation
+I have Fedora 21
+Git connected to GitHub
+Copy of the Installation ISO
+I'm Using CentOS 7
+Target Server
+Misc
+DVD Burner
+Blank DVD
+USB Drive
+
+Process to create a kickstarter file
+
+I'm lazy so I'll manually install the server and save the ks.cfg onto a USB Drive. This will give me a correctly formatted kickstarter file with most of the information in it. You can skip this step if you download my kickstarter file and modify it.
+
+Things of note
+
+Ethernet must be manually turned on 
+My DHCP server configured the interface
+
+
+Manually partition “I will configure partitioning”
+This machine has a 500GB hard drive and will contain about 3 virtual machines so I will create a separate partition for them about 400GB in size
+That means all other parts need to fit in about 100GB
+
+Use LVM
+/boot 500MB
+     must be sda1
+swap 24GB
+     Change volume group to VG00 
+     Everything but boot goes in this volume group
+     Who knows how to size swap now days. I'll make it the size of ram
+/usr 20GB
+/   2GB
+/tmp 5GB
+     Crash dumps go here so... make this much bigger if you want them
+/var 20GB
+     Redhat likes to keep the rpm database in here, updates eventually get large
+/home  5GB
+     Can be small only admin work
+/var/log 10GB
+     Logs need to work until I can establish a log server elseware 
+/var/lib/libvirt/images 300GB
+On larger drives give this as much space as you can my kickstarter file will be configured to let this grow to the end of disk
+
+
+Software Selection
+
+Infrastructure Server
+     Hardware Monitor Utilites
+     Load Balancer
+     Virtualization Hypervisor
+
+
