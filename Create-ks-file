@@ -55,3 +55,16 @@ Infrastructure Server
      Virtualization Hypervisor
 
 
+Making the boot media
+
+Inset a 8GB or larger USB drive in your workstation.
+My cammand to copy the installation media was:
+
+sudo dd if=~/BackUp/ISO/CentOS/CentOS-7.0-1406-x86_64-DVD.iso of=/dev/sdb bs=512k
+
+I booted the media and hit tab
+
+I added this to the boot line:
+
+ks=hd:/dev/sda2/ks.cfg
+
